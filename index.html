@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anil Kumar Singh - Senior Civil Engineer & Project Manager with 28+ years of progressive leadership experience in massive road infrastructure and hydroelectric projects.">
+    <title>Anil Kumar Singh | Senior Infrastructure Project Manager</title>
+    
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Light Theme (Default) */
+        :root {
+            --bg-color: #f1f5f9;        
+            --card-bg: rgba(255, 255, 255, 0.7); 
+            --primary: #0284c7;         
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #0f766e;          
+            --gradient: linear-gradient(135deg, #0284c7, #2563eb);
+            --border-light: rgba(0, 0, 0, 0.05);
+            --border-hover: rgba(0, 0, 0, 0.15);
+            --shadow-subtle: rgba(0, 0, 0, 0.05);
+            --shadow-strong: rgba(0, 0, 0, 0.15);
+            --tag-bg: rgba(0, 0, 0, 0.04);
+            --tag-hover: rgba(2, 132, 199, 0.1);
+        }
+
+        /* Dark Theme Toggle */
+        [data-theme="dark"] {
+            --bg-color: #0f172a;        
+            --card-bg: rgba(30, 41, 59, 0.7); 
+            --primary: #38bdf8;         
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #2dd4bf;          
+            --gradient: linear-gradient(135deg, #0ea5e9, #2563eb);
+            --border-light: rgba(255, 255, 255, 0.05);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --shadow-subtle: rgba(0, 0, 0, 0.2);
+            --shadow-strong: rgba(0, 0, 0, 0.5);
+            --tag-bg: rgba(255, 255, 255, 0.03);
+            --tag-hover: rgba(45, 212, 191, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset for sticky nav */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(45, 212, 191, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sticky Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 15px 0;
+            box-shadow: 0 4px 6px var(--shadow-subtle);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            max-width: 1100px;
+            padding: 0 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: var(--tag-bg);
+            color: var(--primary);
+        }
+
+        /* Theme Toggle Button (Floating) */
+        .theme-toggle-floating {
+            position: fixed;
+            top: 85px;  /* Positioned just below the navbar */
+            right: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            backdrop-filter: blur(10px);
+            color: var(--text-main);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            z-index: 2000;
+            box-shadow: 0 4px 10px var(--shadow-strong);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .theme-toggle-floating:hover {
+            transform: scale(1.1);
+            background: var(--tag-bg);
+            color: var(--primary);
+        }
+
+        /* Nav & Header */
+        header {
+            padding: 40px 0 60px;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .contact-pills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 6px var(--shadow-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .pill:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
+            color: var(--primary);
+        }
+
+        /* Glass Cards */
+        .section {
+            padding: 50px 0;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px var(--shadow-subtle);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px var(--shadow-strong);
+            border-color: var(--border-hover);
+        }
+
+        /* Experience Specific */
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .role {
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .date {
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .job-details {
+            list-style: none;
+        }
+
+        .job-details li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .job-details li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .highlight-text {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        
+        .value-highlight {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* Tags/Competencies */
+        .tags-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            border: 1px solid var(--border-light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            background: var(--tag-hover);
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px var(--shadow-subtle);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes subtlePulse {
+            0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* Staggered List Items */
+        .job-details li {
+            opacity: 0; 
+            transform: translateX(-15px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .glass-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        
+        .glass-card.visible .job-details li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .glass-card.visible .job-details li:nth-child(1) { transition-delay: 0.2s; }
+        .glass-card.visible .job-details li:nth-child(2) { transition-delay: 0.35s; }
+        .glass-card.visible .job-details li:nth-child(3) { transition-delay: 0.5s; }
+        .glass-card.visible .job-details li:nth-child(4) { transition-delay: 0.65s; }
+
+        .tag.visible {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            margin-top: 50px;
+            font-weight: 500;
+        }
+
+        /* Mobile Responsive Media Queries */
+        @media (max-width: 768px) {
+            nav { margin-bottom: 40px; }
+            h1 { font-size: 2.2rem; margin-bottom: 12px; }
+            .title { font-size: 1rem; margin-bottom: 20px; }
+            header { padding: 40px 0 30px; }
+            
+            .theme-toggle-floating { top: 75px; right: 20px; width: 40px; height: 40px; font-size: 1rem; }
+            
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { font-size: 0.85rem; padding: 6px 10px; }
+            
+            .contact-pills { flex-direction: column; align-items: stretch; gap: 10px; }
+            .pill { justify-content: center; padding: 10px; font-size: 0.9rem; }
+            
+            .section { padding: 25px 0; }
+            .section-title { font-size: 1.4rem; margin-bottom: 20px; }
+            
+            .glass-card { padding: 20px; margin-bottom: 20px; border-radius: 12px; }
+            .job-header { flex-direction: column; gap: 8px; margin-bottom: 15px; }
+            .role { font-size: 1.1rem; }
+            .company { font-size: 0.95rem; }
+            .date { font-size: 0.8rem; padding: 4px 12px; }
+            
+            .job-details li { font-size: 0.95rem; margin-bottom: 12px; padding-left: 20px; }
+            .job-details li::before { font-size: 1rem; }
+            .tag { padding: 6px 14px; font-size: 0.85rem; }
+            
+            footer { padding: 25px 0; font-size: 0.9rem; margin-top: 30px; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .title { font-size: 0.9rem; }
+            .glass-card { padding: 15px; border-radius: 10px; }
+            .section-title { font-size: 1.25rem; }
+            p { font-size: 0.95rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Theme Toggle (Floating) -->
+    <button id="theme-toggle" class="theme-toggle-floating" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#profile">Profile</a>
+            <a href="#competencies">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+        </div>
+    </nav>
+
+    <header class="container" id="top">
+        <h1>Anil Kumar Singh</h1>
+        <div class="title">Civil Engineer | Senior Infrastructure Project Manager</div>
+        
+        <div class="contact-pills">
+            <a href="tel:+919760090236" class="pill"><i class="fa-solid fa-phone"></i> +91 9760090236</a>
+            <a href="mailto:anilsingh854@gmail.com" class="pill"><i class="fa-solid fa-envelope"></i> anilsingh854@gmail.com</a>
+            <span class="pill"><i class="fa-solid fa-location-dot"></i> Agra, UP, India</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Professional Summary -->
+        <section id="profile" class="section delay-1">
+            <div class="glass-card">
+                <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Executive Profile</h2>
+                <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.8;">
+                    Competent and seasoned Civil Engineer with over <span class="highlight-text value-highlight">28 years of progressive leadership experience</span> specializing in massive road infrastructure projects, meticulous project management, and high-level government liaisoning. Proven expertise orchestrating seamless project execution for mega developments, including the Bharatmala Pariyojana expressways. Adept at fast-tracking <span class="highlight-text">land acquisitions and obtaining critical NOCs</span> from competent authorities (NHAI, PWD, Forest Departments) by building robust stakeholder relationships. 
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section id="competencies" class="section delay-2">
+            <h2 class="section-title"><i class="fa-solid fa-bolt"></i> Core Competencies</h2>
+            <div class="tags-grid">
+                <div class="tag">Large-scale Infrastructure Management</div>
+                <div class="tag">Government Liaisoning & NOCs</div>
+                <div class="tag">Land Acquisition & Dispute Resolution</div>
+                <div class="tag">Project Execution (Earthwork to BC)</div>
+                <div class="tag">Structural Works Quality Control</div>
+                <div class="tag">Estimation & CPWD Specifications</div>
+                <div class="tag">NHAI Alignment & Design Approvals</div>
+                <div class="tag">Environmental Clearances (DFO, CFO)</div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section delay-3">
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+
+            <div class="glass-card" id="brij-gopal">
+                <div class="job-header">
+                    <div>
+                        <div class="role">Assistant General Manager</div>
+                        <div class="company">Brij Gopal Construction Company Pvt. Ltd Ramky (JV)</div>
+                    </div>
+                    <div class="date">Dec 2022 – Present</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Road Projects:</span> Spearheaded robust project management for the 4-Laning of the Aligarh-Kanpur Section (45.8 km) under the Bharatmala Pariyojana on HAM Mode.</li>
+                    <li><span class="highlight-text">Project Management:</span> Directed comprehensive on-site execution, ensuring uninterrupted construction workflows from preliminary earthwork stages through to final delivery.</li>
+                    <li><span class="highlight-text">Liaisoning & NOCs:</span> Acted as the primary interface with NHAI, securing critical NOCs for road alignment, designs, and operational clearances, entirely preventing bureaucratic delays.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <div class="job-header">
+                    <div>
+                        <div class="role">Deputy General Manager</div>
+                        <div class="company">M/S Jakson Limited (Ajay Infra Pvt. Ltd)</div>
+                    </div>
+                    <div class="date">Dec 2021 – Dec 2022</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Road Projects:</span> Led the end-to-end development of the Six Lane Jakkuva-Korlam section (24.30 km) of NH 130 CD under the pivotal Raipur-Visakhapatnam corridor, <span class="value-highlight">valued at ₹663.60 Crore</span>.</li>
+                    <li><span class="highlight-text">Liaisoning Leadership:</span> Cultivated robust relationships with local officials to expedite land acquisitions, mediate on-site operational challenges, and strictly enforce safety protocols.</li>
+                    <li><span class="highlight-text">Key NOC Achievements:</span> Aggressively secured NOCs from the NHAI Regional Office, Forest Department, State Pollution Control Board, and the Labour Commissioner.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <div class="job-header">
+                    <div>
+                        <div class="role">Deputy General Manager</div>
+                        <div class="company">M/S Jakson Limited (Ajay Infra Pvt. Ltd)</div>
+                    </div>
+                    <div class="date">May 2020 – Dec 2021</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Road Projects:</span> Oversaw the rigorous construction of the Mokarba Chowk to Panipat highway section <span class="value-highlight">(70.5 km, 8-laning project valued at approx. ₹1,524 Crore)</span>, validating that all phases met stringent schedule milestones.</li>
+                    <li><span class="highlight-text">Liaisoning & Permitting:</span> Synchronized extensive coordination efforts with NHAI PIU Panipat and local development authorities to secure essential permits.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <div class="job-header">
+                    <div>
+                        <div class="role">Project Manager</div>
+                        <div class="company">M/S Jakson Limited / M/S Jaiprakash Associates Limited</div>
+                    </div>
+                    <div class="date">Mar 2016 – May 2020</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Bharatmala Project:</span> Masterminded core construction operations for the 31 km road project (Package 4th) in Rajasthan. Governed massive earthwork logistics and DBM/BC phases.</li>
+                    <li><span class="highlight-text">Vanaras-Gorakhpur & Lucknow Ring Road:</span> Directed operations, overseeing structural quality control from subgrade through to PQC, drastically expediting land acquisition timelines.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <div class="job-header">
+                    <div>
+                        <div class="role">RE Nodal Officer</div>
+                        <div class="company">Jaypee Infratech Limited</div>
+                    </div>
+                    <div class="date">Jan 2007 – Oct 2015</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Mega-Project Leadership:</span> Anchored the sweeping construction supervision, toll optimization, and regional coordination for the monumental 165 km, 6-lane Yamuna Expressway corridor, <span class="value-highlight">completed at an estimated cost of ₹13,300 Crores</span>.</li>
+                    <li><span class="highlight-text">Land Acquisition:</span> Facilitated high-stakes negotiations with government officials and village leaders to cement land acquisition agreements, ensuring zero operational disruptions across the 165 km expanse.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <div class="job-header">
+                    <div>
+                        <div class="role">Sr. Field Engineer</div>
+                        <div class="company">M/S Jaiprakash Associates Limited</div>
+                    </div>
+                    <div class="date">Dec 2001 – Jan 2007</div>
+                </div>
+                <ul class="job-details">
+                    <li><span class="highlight-text">Project Management:</span> Piloted localized construction logistics for the massive 390 MW Dulhasti Hydroelectric Project in Kishtwar, J&K, <span class="value-highlight">a highly complex endeavor valued at ₹2,400 Crores ($750 Million)</span>.</li>
+                    <li><span class="highlight-text">Liaisoning:</span> Acted as the singular liaison linking the mobilization team with NHPC officials, obtaining complex environmental resolutions and structural design approvals (powerhouse, TG, TRT).</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <h3 style="color: var(--text-main); font-size: 1.25rem;">B.Tech in Civil Engineering</h3>
+                    <div style="color: var(--text-muted); font-weight: 500;">Magadh University, Bodh Gaya | 2001</div>
+                </div>
+                <hr style="border: 0; height: 1px; background: var(--border-light);">
+                <div>
+                    <h3 style="color: var(--text-main); font-size: 1.25rem;">Diploma in Civil Engineering</h3>
+                    <div style="color: var(--text-muted); font-weight: 500;">Mumbai Board of Technical Education, Maharashtra | 1997</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Anil Kumar Singh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // --- 1. Dark/Light Theme Toggle ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const rootElement = document.documentElement;
+
+        // Ensure default is light
+        let isDark = false; 
+
+        themeToggleBtn.addEventListener('click', () => {
+            isDark = !isDark;
+            if (isDark) {
+                rootElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa-solid fa-sun';
+            } else {
+                rootElement.removeAttribute('data-theme');
+                themeIcon.className = 'fa-solid fa-moon';
+            }
+        });
+
+        // --- 2. Scroll Reveal Animations ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Apply initial hidden state to all cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s, box-shadow 0.3s';
+            observer.observe(card);
+        });
+        
+        // Stagger tags in core competencies
+        document.querySelectorAll('.tags-grid .tag').forEach((tag, index) => {
+            tag.style.opacity = '0';
+            tag.style.animationDelay = `${index * 0.05}s`;
+            observer.observe(tag);
+        });
+    </script>
+</body>
+</html>
